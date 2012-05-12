@@ -1,4 +1,6 @@
-package org.cats;
+package org.cats.dashboard;
+
+import org.cats.R;
 
 import android.app.Activity;
 import android.os.Bundle;

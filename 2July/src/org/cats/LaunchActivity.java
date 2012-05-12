@@ -6,7 +6,7 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 
 public class LaunchActivity extends Activity {
-	private final static int LAUNCH_TIME = 10000; // miliseconds
+	private final static int LAUNCH_TIME = 3000; // miliseconds
 	private MediaPlayer launchSong;
 
 	@Override
@@ -24,7 +24,7 @@ public class LaunchActivity extends Activity {
 					e.printStackTrace();
 				} finally {
 					Intent dashboardMenuActivity = new Intent(
-							"org.cats.DASHBOARDDESINGACTIVITY");
+							"org.cats.dashboard.DASHBOARDDESINGACTIVITY");
 					startActivity(dashboardMenuActivity);
 				}
 			}

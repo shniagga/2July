@@ -5,10 +5,10 @@
     android:layout_height="fill_parent"
     android:orientation="vertical" >
 
-    <include layout="@layout/actionbar_layout" />
+    <include layout="@layout/dashboard_actionbar_layout" />
 
-    <include layout="@layout/fragment_layout" />
+    <include layout="@layout/dashboard_fragment_layout" />
 
-    <include layout="@layout/footer_layout" />
+    <include layout="@layout/dashboard_footer_layout" />
 
 </LinearLayout>

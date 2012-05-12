@@ -8,6 +8,6 @@
         android:clickable="false"
         android:paddingLeft="15dip"
         android:scaleType="center"
-        android:src="@drawable/actionbar_logo" />
+        android:src="@drawable/dashboard_actionbar_logo" />
 
 </LinearLayout>

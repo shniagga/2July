@@ -1,4 +1,4 @@
-package org.cats;
+package org.cats.dashboard;
 
 import android.content.Context;
 import android.util.AttributeSet;
