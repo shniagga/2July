@@ -13,7 +13,16 @@
             android:name=".LaunchActivity"
             android:label="@string/app_name" >
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />s                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.MAIN" />               
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".DashboardDesignActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="org.cats.DASHBOARDDESINGACTIVITY" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
     </application>

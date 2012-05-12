@@ -1,6 +1,7 @@
 package org.cats;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 
@@ -22,13 +23,15 @@ public class LaunchActivity extends Activity {
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				} finally {
-					// TODO Intent
+					Intent dashboardMenuActivity = new Intent(
+							"org.cats.DASHBOARDDESINGACTIVITY");
+					startActivity(dashboardMenuActivity);
 				}
 			}
 		};
 		timer.start();
 	}
-	
+
 	@Override
 	protected void onPause() {
 		super.onPause();
