@@ -18,8 +18,6 @@ public class DashboardDesignActivity extends Activity {
 		Button btn_friends = (Button) findViewById(R.id.btn_friends);
 		Button btn_messages = (Button) findViewById(R.id.btn_messages);
 		Button btn_places = (Button) findViewById(R.id.btn_places);
-		Button btn_events = (Button) findViewById(R.id.btn_events);
-		Button btn_photos = (Button) findViewById(R.id.btn_photos);
 
 		btn_newsfeed.setOnClickListener(new View.OnClickListener() {
 			@Override
@@ -43,20 +41,6 @@ public class DashboardDesignActivity extends Activity {
 		});
 
 		btn_places.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View view) {
-				System.out.println("Hello");
-			}
-		});
-
-		btn_events.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View view) {
-				System.out.println("Hello");
-			}
-		});
-
-		btn_photos.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
 				System.out.println("Hello");
