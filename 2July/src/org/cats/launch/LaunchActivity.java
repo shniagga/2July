@@ -1,4 +1,6 @@
-package org.cats;
+package org.cats.launch;
+
+import org.cats.R;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -6,17 +8,20 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 
 public class LaunchActivity extends Activity {
-	private final static int LAUNCH_TIME = 3000; // miliseconds
+	private final static int LAUNCH_TIME = 7000; // miliseconds
+	private LaunchProgressBarView progressBarView;
 	private MediaPlayer launchSong;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.launch);
+		setContentView(R.layout.launch_layout);
+		progressBarView = (LaunchProgressBarView) findViewById(R.id.launch_progress_bar);
+		progressBarView.setValue(0);
 		launchSong = MediaPlayer.create(LaunchActivity.this, R.raw.background);
 		launchSong.start();
 
-		Thread timer = new Thread() {
+		Thread sleeper = new Thread() {
 			public void run() {
 				try {
 					sleep(LAUNCH_TIME);
@@ -29,7 +34,8 @@ public class LaunchActivity extends Activity {
 				}
 			}
 		};
-		timer.start();
+		sleeper.start();
+
 	}
 
 	@Override
