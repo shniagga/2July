@@ -7,7 +7,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:paddingTop="10dip"
-        android:text="www.facebook.com"
+        android:text="here will be advertising"
         android:textColor="#606060" />
 
 </LinearLayout>

@@ -2,12 +2,57 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     style="@style/ActionBarCompat" >
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="fill_parent"
-        android:clickable="false"
-        android:paddingLeft="15dip"
-        android:scaleType="center"
-        android:src="@drawable/dashboard_actionbar_logo" />
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/actionbar_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left|top"
+        android:height="32dp"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/actionbar_icon_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:gravity="left|center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/actionbar_icon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/greenstar" >
+            </ImageButton>
+
+            <TextView
+                android:id="@+id/actionbar_name"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center_vertical"
+                android:textStyle="bold"
+                android:text="Application Menu" >
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/actionbar_reload_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:gravity="right"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/reload"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/greenstar" >
+            </ImageButton>
+        </LinearLayout>
+    </LinearLayout>
 
 </LinearLayout>
