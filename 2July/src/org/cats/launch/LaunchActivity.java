@@ -9,7 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 
 public class LaunchActivity extends Activity {
-	private final static int LAUNCH_TIME = 5000; // miliseconds
+	private final static int LAUNCH_TIME = 10000; // miliseconds
 	private MediaPlayer launchSong;
 
 	@Override
