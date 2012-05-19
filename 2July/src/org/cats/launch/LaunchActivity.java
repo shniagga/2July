@@ -10,7 +10,10 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 
+import android.util.Log;
+
 public class LaunchActivity extends Activity {
+	private final static String CLASS_NAME = LaunchActivity.class.toString();
 	private final static int LAUNCH_TIME = 5000; // miliseconds
 	private final static int MAX_PERCENT = 100;
 	private final static int QUARTER_SECOND = 250;
@@ -58,7 +61,7 @@ public class LaunchActivity extends Activity {
 				try {
 					sleep(LAUNCH_TIME);
 				} catch (InterruptedException e) {
-					e.printStackTrace();
+					Log.e(CLASS_NAME, "Interrupter exeption in music thread");
 				}
 			}
 		};
@@ -74,7 +77,8 @@ public class LaunchActivity extends Activity {
 					try {
 						Thread.sleep(LAUNCH_TIME / 100);
 					} catch (InterruptedException e) {
-						e.printStackTrace();
+						Log.e(CLASS_NAME,
+								"Interrupter exeption in progress thread during ++");
 					}
 					progressBarHandler.post(new Runnable() {
 						public void run() {
@@ -86,7 +90,8 @@ public class LaunchActivity extends Activity {
 					try {
 						Thread.sleep(QUARTER_SECOND);
 					} catch (InterruptedException e) {
-						e.printStackTrace();
+						Log.e(CLASS_NAME,
+								"Interrupter exeption in progress thread = MAX_PERCENT");
 					} finally {
 						progressBar.dismiss();
 						Intent dashboardMenuActivity = new Intent(
