@@ -5,7 +5,6 @@
     <org.cats.preferences.model.IconPreference
         android:key="Notifications"
         android:title="Notifications" />
-
     <org.cats.preferences.model.IconPreference
         android:key="Application"
         android:title="Application" />

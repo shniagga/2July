@@ -1,9 +1,8 @@
 package org.cats.preferences.activity;
 
+import org.cats.R;
 import org.cats.preferences.model.IconPreference;
 
-import android.R;
-import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -20,8 +19,10 @@ public class PreferencesActivity extends PreferenceActivity {
 		IconPreference notify = (IconPreference) findPreference("Notifications");
 		IconPreference app = (IconPreference) findPreference("Application");
 
-		Drawable notifyIcon = res.getDrawable(R.drawable.preferences_ic_setting_app);
-		Drawable appIcon = res.getDrawable(R.drawable.preferences_ic_setting_notify);
+		Drawable notifyIcon = res
+				.getDrawable(R.drawable.preferences_ic_setting_app);
+		Drawable appIcon = res
+				.getDrawable(R.drawable.preferences_ic_setting_notify);
 
 		notify.setIcon(notifyIcon);
 		app.setIcon(appIcon);
@@ -30,12 +31,14 @@ public class PreferencesActivity extends PreferenceActivity {
 			@Override
 			public boolean onPreferenceClick(Preference preference) {
 				System.out.println("Hello World");
+				return true;
 			}
 		});
 		app.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
 			@Override
 			public boolean onPreferenceClick(Preference preference) {
 				System.out.println("Hello World");
+				return true;
 			}
 		});
 	}
