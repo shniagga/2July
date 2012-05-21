@@ -3,7 +3,11 @@ package org.cats.dashboard.activity;
 import org.cats.R;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
@@ -46,5 +50,33 @@ public class DashboardActivity extends Activity {
 				System.out.println("Hello");
 			}
 		});
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		super.onCreateOptionsMenu(menu);
+		MenuInflater menuInflater = getMenuInflater();
+		menuInflater.inflate(R.menu.menu, menu);
+		return true;
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		super.onOptionsItemSelected(item);
+		switch (item.getItemId()) {
+		case R.id.aboutUs:
+			Intent aboutUsIntent = new Intent();
+			startActivity(aboutUsIntent);
+			break;
+		case R.id.preferences:
+			Intent preferencesIntent = new Intent(
+					"org.cats.preferences.activity.PREFERENCEACTIVITY");
+			startActivity(preferencesIntent);
+			break;
+		case R.id.exit:
+			finish();
+			break;
+		}
+		return false;
 	}
 }
