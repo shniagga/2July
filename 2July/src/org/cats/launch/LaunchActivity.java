@@ -95,7 +95,7 @@ public class LaunchActivity extends Activity {
 					} finally {
 						progressBar.dismiss();
 						Intent dashboardMenuActivity = new Intent(
-								"org.cats.dashboard.DASHBOARDDESINGACTIVITY");
+								"org.cats.dashboard.activity.DASHBOARDACTIVITY");
 						startActivity(dashboardMenuActivity);
 					}
 

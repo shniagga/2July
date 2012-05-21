@@ -1,4 +1,4 @@
-package org.cats.dashboard;
+package org.cats.dashboard.activity;
 
 import org.cats.R;
 
@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class DashboardDesignActivity extends Activity {
+public class DashboardActivity extends Activity {
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
