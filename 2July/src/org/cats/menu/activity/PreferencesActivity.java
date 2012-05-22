@@ -16,8 +16,8 @@ public class PreferencesActivity extends PreferenceActivity {
 		addPreferencesFromResource(R.xml.settings);
 		Resources res = getResources();
 
-		IconPreference notify = (IconPreference) findPreference("Notifications");
-		IconPreference app = (IconPreference) findPreference("Application");
+		IconPreference notify = (IconPreference) findPreference("notifications");
+		IconPreference app = (IconPreference) findPreference("application");
 
 		Drawable notifyIcon = res
 				.getDrawable(R.drawable.preferences_ic_setting_app);

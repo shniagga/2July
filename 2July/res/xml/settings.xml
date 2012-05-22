@@ -2,16 +2,16 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="Settings" >
 
-    <org.cats.menu.model.IconPreference
-        android:key="Notifications"
-        android:title="Notifications" />
-    <org.cats.menu.model.IconPreference
-        android:key="Application"
-        android:title="Application" />
-
     <CheckBoxPreference
-        android:key="CheckBox"
-        android:title="CheckBox" >
+        android:key="silent"
+        android:title="silent mode" >
     </CheckBoxPreference>
+
+    <org.cats.menu.model.IconPreference
+        android:key="notifications"
+        android:title="notifications" />
+    <org.cats.menu.model.IconPreference
+        android:key="application"
+        android:title="application" />
 
 </PreferenceScreen>
