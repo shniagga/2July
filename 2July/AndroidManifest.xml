@@ -26,10 +26,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".preferences.activity.PreferencesActivity"
+            android:name=".menu.activity.PreferencesActivity"
             android:label="@string/app_name" >
             <intent-filter>
-                <action android:name="org.cats.preferences.activity.PREFERENCEACTIVITY" />
+                <action android:name="org.cats.menu.activity.PREFERENCEACTIVITY" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>

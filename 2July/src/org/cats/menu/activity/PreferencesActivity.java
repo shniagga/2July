@@ -1,7 +1,7 @@
-package org.cats.preferences.activity;
+package org.cats.menu.activity;
 
 import org.cats.R;
-import org.cats.preferences.model.IconPreference;
+import org.cats.menu.model.IconPreference;
 
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;

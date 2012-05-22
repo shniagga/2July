@@ -2,10 +2,10 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="Settings" >
 
-    <org.cats.preferences.model.IconPreference
+    <org.cats.menu.model.IconPreference
         android:key="Notifications"
         android:title="Notifications" />
-    <org.cats.preferences.model.IconPreference
+    <org.cats.menu.model.IconPreference
         android:key="Application"
         android:title="Application" />
 

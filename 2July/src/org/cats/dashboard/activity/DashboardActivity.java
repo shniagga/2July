@@ -1,9 +1,10 @@
 package org.cats.dashboard.activity;
 
 import org.cats.R;
+import org.cats.menu.service.MenuItemFactory;
+import org.cats.menu.service.impl.MenuItemFactoryImpl;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -63,20 +64,8 @@ public class DashboardActivity extends Activity {
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		super.onOptionsItemSelected(item);
-		switch (item.getItemId()) {
-		case R.id.aboutUs:
-			Intent aboutUsIntent = new Intent();
-			startActivity(aboutUsIntent);
-			break;
-		case R.id.preferences:
-			Intent preferencesIntent = new Intent(
-					"org.cats.preferences.activity.PREFERENCEACTIVITY");
-			startActivity(preferencesIntent);
-			break;
-		case R.id.exit:
-			finish();
-			break;
-		}
+		MenuItemFactory factory = new MenuItemFactoryImpl();
+		factory.launchItemIntent(item.getItemId(), this);
 		return false;
 	}
 }

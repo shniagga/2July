@@ -1,4 +1,4 @@
-package org.cats.preferences.model;
+package org.cats.menu.model;
 
 import org.cats.R;
 
