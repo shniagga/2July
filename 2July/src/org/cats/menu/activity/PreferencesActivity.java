@@ -10,23 +10,37 @@ import android.preference.Preference;
 import android.preference.PreferenceActivity;
 
 public class PreferencesActivity extends PreferenceActivity {
+	private static final String SOUND_KEY = "sound";
+	private static final String NOTIFICATION_KEY = "notifications";
+	private static final String APPLICATION_KEY = "application";
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		addPreferencesFromResource(R.xml.settings);
 		Resources res = getResources();
 
-		IconPreference notify = (IconPreference) findPreference("notifications");
-		IconPreference app = (IconPreference) findPreference("application");
+		IconPreference sound = (IconPreference) findPreference(SOUND_KEY);
+		IconPreference notify = (IconPreference) findPreference(NOTIFICATION_KEY);
+		IconPreference app = (IconPreference) findPreference(APPLICATION_KEY);
 
+		Drawable soundIcon = res.getDrawable(R.drawable.preferences_ic_sound);
 		Drawable notifyIcon = res
 				.getDrawable(R.drawable.preferences_ic_setting_app);
 		Drawable appIcon = res
 				.getDrawable(R.drawable.preferences_ic_setting_notify);
 
+		sound.setIcon(soundIcon);
 		notify.setIcon(notifyIcon);
 		app.setIcon(appIcon);
 
+		sound.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+			@Override
+			public boolean onPreferenceClick(Preference preference) {
+				System.out.println("Hello World");
+				return true;
+			}
+		});
 		notify.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
 			@Override
 			public boolean onPreferenceClick(Preference preference) {
