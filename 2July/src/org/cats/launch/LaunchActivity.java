@@ -17,6 +17,7 @@ public class LaunchActivity extends Activity {
 	private final static int LAUNCH_TIME = 5000; // miliseconds
 	private final static int MAX_PERCENT = 100;
 	private final static int QUARTER_SECOND = 250;
+
 	private MediaPlayer launchSong;
 	private ProgressDialog progressBar;
 	private int progressBarStatus;
